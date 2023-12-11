@@ -7,13 +7,15 @@ import { Logo } from "./icons/logo";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full border-b border-white backdrop-blur-[12px]">
-      <Container className="flex h-[var(--navigation-height)]">
-        <Link className="flex items-center text-md" href="/">
-          <Logo /> Sick
-        </Link>
+    <header className="flex items-center top-0 left-0 w-full h-[136px]">
+      <Container className="flex justify-center h-[var(--navigation-height)] backdrop-blur-[3px] border border-glass rounded-[16px] w-[fit-content] p-[10px] bg-glass-background shadow-glass">
         <nav className="h-full">
-          <ul className="flex items-center h-full [&_a]:text-sm [&_li]:ml-6">
+          <ul className="flex items-center h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
+            <li>
+              <Link className="flex items-center text-md" href="/">
+                <Logo height={150} width={150} />
+              </Link>
+            </li>
             <li>
               <Link href="">Process</Link>
             </li>

@@ -7,8 +7,12 @@ export default function Home() {
       <main>
         <Container>
           <Hero>
-            <HeroTitle>akldfjaldksjfbalkdjsfb</HeroTitle>
-            <HeroSubtitle>adfadfadsfadfs</HeroSubtitle>
+            <HeroTitle>
+              From Ideas to Code... Turbocharged Implementation.
+            </HeroTitle>
+            <HeroSubtitle>
+              Fueling Tech Dreams with Custom Software, Web, and AI Solutions.
+            </HeroSubtitle>
           </Hero>
         </Container>
       </main>

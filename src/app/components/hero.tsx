@@ -17,5 +17,12 @@ export const HeroSubtitle = ({ children }: HeroChildProps) => {
 };
 
 export const Hero = ({ children }: HeroProps) => {
-  return <div className="text-center">{children}</div>;
+  return (
+    <div className="text-center h-[100vh]">
+      {children}
+      <button className="border p-[5px] rounded-lg">
+        Startup Your Consultation
+      </button>
+    </div>
+  );
 };
