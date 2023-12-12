@@ -8,9 +8,11 @@ const turboChargedText = () => {
 export const Hero = () => {
   return (
     <div className="text-center h-[100vh] mt-[125px]">
-      <span className="text-[72px] my-5 leading-tight">
-        Wix? Wordpress? Nah. Your Business Deserves Better.
-        <span className="italic font-extrabold bg-turbocharged-gradient bg-clip-text text-transparent bg-contain inline-block"></span>
+      <span className="text-[72px] my-5 bg-hero-title-gradient bg-clip-text text-transparent leading-tight">
+        Wix? Wordpress? Nah. Your Business{" "}
+        <span className="bg-emphasized-hero-gradient bg-clip-text text-transparent">
+          Deserves Better.
+        </span>
       </span>
       <p className="text-lg my-8">
         Crafted with care, not just clicked together. Experience the impact of

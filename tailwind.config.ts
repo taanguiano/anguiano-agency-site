@@ -45,10 +45,11 @@ const config: Config = {
         "primary-gradient":
           "linear-gradient(to bottom, #000212, #281a30, #572641, #863542, #a85234, #ab5435, #af5536, #b25737, #983c4a, #6e2f52, #3e274a, #141c34)",
         "hero-title-gradient":
-          "linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.7) 100%)",
+          "linear-gradient(180deg,color(display-p3 .9411764706 .9333333333 .9764705882/.8) 0%,color(display-p3 .8862745098 .9098039216 1/1) 100%)",
         "header-radial-gradient":
           "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)",
-        "turbocharged-gradient": "linear-gradient(45deg, #f3ec78, #af4261)",
+        "emphasized-hero-gradient":
+          "linear-gradient(135deg,color(display-p3 .6196078431 .4784313725 1/1) 0%,color(display-p3 .9960784314 .5450980392 .7333333333/1) 33.33%,color(display-p3 1 .7411764706 .4784313725/1) 66.67%,color(display-p3 .9725490196 .9176470588 .7647058824/1) 100%);",
       },
       boxShadow: {
         glass: "0 4px 30px rgba(0, 0, 0, 0.1)",
