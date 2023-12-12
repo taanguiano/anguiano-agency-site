@@ -1,28 +1,23 @@
 import React from "react";
+import { MyButton } from "./my-button";
 
-type HeroProps = {
-  children: React.ReactNode;
+const turboChargedText = () => {
+  return <span className="italic font-extrabold">TURBOCHARGE</span>;
 };
 
-type HeroChildProps = {
-  children: React.ReactNode;
-};
-
-export const HeroTitle = ({ children }: HeroChildProps) => {
-  return <h1 className="text-5xl my-5">{children}</h1>;
-};
-
-export const HeroSubtitle = ({ children }: HeroChildProps) => {
-  return <p className="text-lg mb-8">{children}</p>;
-};
-
-export const Hero = ({ children }: HeroProps) => {
+export const Hero = () => {
   return (
-    <div className="text-center h-[100vh]">
-      {children}
-      <button className="border p-[5px] rounded-lg">
-        Startup Your Consultation
-      </button>
+    <div className="text-center h-[100vh] mt-[125px]">
+      <span className="text-[72px] my-5 leading-tight">
+        Wix? Wordpress? Nah. Your Business Deserves Better.
+        <span className="italic font-extrabold bg-turbocharged-gradient bg-clip-text text-transparent bg-contain inline-block"></span>
+      </span>
+      <p className="text-lg my-8">
+        Crafted with care, not just clicked together. Experience the impact of
+        our custom software, mobile, and web development solutions for your
+        brand.
+      </p>
+      <MyButton>Treat Your Brand Now</MyButton>
     </div>
   );
 };

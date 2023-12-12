@@ -4,18 +4,17 @@ import Link from "next/link";
 import React from "react";
 import { Container } from "./container";
 import { Logo } from "./icons/logo";
+import { MyButton } from "./my-button";
 
 export const Header = () => {
   return (
-    <header className="flex items-center top-0 left-0 w-full h-[136px]">
-      <Container className="flex justify-center h-[var(--navigation-height)] backdrop-blur-[3px] border border-glass rounded-[16px] w-[fit-content] p-[10px] bg-glass-background shadow-glass">
-        <nav className="h-full">
-          <ul className="flex items-center h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
-            <li>
-              <Link className="flex items-center text-md" href="/">
-                <Logo height={150} width={150} />
-              </Link>
-            </li>
+    <header className="fixed w-full backdrop-blur-[16px] border-b border-glass">
+      <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
+        <Link className="flex items-center text-md" href="/">
+          <Logo height={175} width={175} />
+        </Link>
+        <nav className="">
+          <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
             <li>
               <Link href="">Process</Link>
             </li>
@@ -36,6 +35,7 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
+        <MyButton>Schedule Now</MyButton>
       </Container>
     </header>
   );

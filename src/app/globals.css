@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --navigation-height: 72px;
+    --navigation-height: 48px;
   }
 
   html {
