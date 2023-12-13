@@ -43,7 +43,7 @@ const config: Config = {
       },
       backgroundImage: {
         "primary-gradient":
-          "linear-gradient(to bottom, #000212, #281a30, #572641, #863542, #a85234, #ab5435, #af5536, #b25737, #983c4a, #6e2f52, #3e274a, #141c34)",
+          "linear-gradient(to bottom, #0c0c0c, #312733, #623f50, #995962, #ca7968);",
         "hero-title-gradient":
           "linear-gradient(180deg,color(display-p3 .9411764706 .9333333333 .9764705882/.8) 0%,color(display-p3 .8862745098 .9098039216 1/1) 100%)",
         "header-radial-gradient":

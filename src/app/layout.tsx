@@ -21,10 +21,10 @@ export default function RootLayout({
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
-      <body>
-        <div className="bg-[rgb(7 7 16 / 1)] h-[100vh]">
+      <body className="overflow-x-hidden">
+        <div className="bg-primary-gradient">
           <Header />
-          <main className="pt-[var(--navigation-height)]">{children}</main>
+          <div className="pt-[var(--navigation-height)]">{children}</div>
           <footer>
             <Container>footer</Container>
           </footer>

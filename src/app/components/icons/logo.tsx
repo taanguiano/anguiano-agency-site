@@ -1,5 +1,5 @@
 import React from "react";
-import FullLogo from "../../../../public/anguianoAgencyLogo.png";
+import FullLogo from "../../../../public/dundeeDevelopment.png";
 import Image from "next/image";
 
 type LogoProps = {

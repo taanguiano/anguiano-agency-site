@@ -12,3 +12,9 @@
     font-size: 62.5%;
   }
 }
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
