@@ -5,10 +5,13 @@ import React from "react";
 import { Container } from "./container";
 import { Logo } from "./icons/logo";
 import { DundeeButton } from "./dundee-button";
+import { useAnchorClick } from "../hooks/useAnchorClick";
 
 export const Header = () => {
+  const { handleAnchorClick } = useAnchorClick();
+
   return (
-    <header className="fixed w-full backdrop-blur-[16px] border-b border-glass">
+    <header className="w-fit backdrop-blur-glass bg-glass shadow-glass rounded-box ml-auto mr-auto p-2">
       <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
         <Link className="flex items-center text-md" href="/">
           <Logo height={175} width={175} />
@@ -16,7 +19,9 @@ export const Header = () => {
         <nav className="">
           <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
             <li>
-              <Link href="">Process</Link>
+              <Link href="" onClick={() => handleAnchorClick("process")}>
+                Process
+              </Link>
             </li>
             <li>
               <Link href="">Services</Link>
@@ -35,7 +40,12 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        <DundeeButton>Schedule Now</DundeeButton>
+        <button
+          className="btn btn-primary"
+          onClick={() => handleAnchorClick("contact")}
+        >
+          Schedule Now
+        </button>
       </Container>
     </header>
   );

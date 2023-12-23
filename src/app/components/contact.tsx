@@ -26,34 +26,36 @@ export const Contact = () => {
     console.log(formData);
 
   return (
-    <section className="h-[100vh]">
-      <div className="w-full bg-glass backdrop-blur-glass rounded-xl shadow-glass p-5">
-        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-          <input
-            className="input input-ghost bg-input mb-1"
-            type="text"
-            placeholder="Name"
-            {...register("fullName")}
-          />
-          <input
-            className="input input-ghost bg-input mb-1"
-            type="text"
-            placeholder="Email"
-            {...register("email")}
-          />
-          <input
-            className="input input-ghost bg-input mb-1"
-            type="text"
-            placeholder="Contact Number"
-            {...register("phone")}
-          />
-          <textarea
-            className="textarea textarea-ghost bg-input mb-1"
-            placeholder="Tell us a little about your business or project requirements"
-            {...register("projectDescription")}
-          />
-          <button className="btn btn-primary">Submit</button>
-        </form>
+    <section className="h-[100vh] p-[var(--navigation-height)]" id="contact">
+      <div className="w-full bg-glass backdrop-blur-glass rounded-xl shadow-glass p-5 flex justify-around gap-5">
+        <div className="flex flex-col w-1/2">
+          <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+            <input
+              className="input input-ghost bg-input mb-1"
+              type="text"
+              placeholder="Name"
+              {...register("fullName")}
+            />
+            <input
+              className="input input-ghost bg-input mb-1"
+              type="text"
+              placeholder="Email"
+              {...register("email")}
+            />
+            <input
+              className="input input-ghost bg-input mb-1"
+              type="text"
+              placeholder="Contact Number"
+              {...register("phone")}
+            />
+            <textarea
+              className="textarea textarea-ghost bg-input mb-1"
+              placeholder="Tell us a little about your business or project requirements"
+              {...register("projectDescription")}
+            />
+            <button className="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </div>
     </section>
   );

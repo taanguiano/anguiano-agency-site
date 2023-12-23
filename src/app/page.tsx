@@ -1,7 +1,7 @@
 import { Contact } from "./components/contact";
 import { Container } from "./components/container";
 import { Hero } from "./components/hero";
-import { ServicesBanner } from "./components/services-banner";
+// import { ServicesBanner } from "./components/services-banner";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <Container>
           <Hero />
         </Container>
-        <ServicesBanner />
+        {/* <ServicesBanner /> */}
         <Container>
           <Contact />
         </Container>

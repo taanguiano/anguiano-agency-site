@@ -44,7 +44,7 @@ const config: Config = {
       },
       backgroundImage: {
         "primary-gradient":
-          "linear-gradient(to bottom, #0c0c0c, #312733, #623f50, #995962, #ca7968);",
+          "radial-gradient(circle, #845ec2, #0078d1, #0086c1, #008d9f, #008f7a)",
         "hero-title-gradient":
           "linear-gradient(180deg,color(display-p3 .9411764706 .9333333333 .9764705882/.8) 0%,color(display-p3 .8862745098 .9098039216 1/1) 100%)",
         "header-radial-gradient":
