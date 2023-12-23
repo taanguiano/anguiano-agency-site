@@ -23,11 +23,13 @@
     "ciro",
     "Collapsable",
     "Creds",
+    "daisyui",
     "Formik",
     "homeloader",
     "Leaderboard",
     "Licence",
     "REBRAND",
+    "tailwindcss",
     "tiktok"
   ],
   "editor.formatOnPaste": true

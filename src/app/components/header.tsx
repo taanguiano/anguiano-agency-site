@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Container } from "./container";
 import { Logo } from "./icons/logo";
-import { MyButton } from "./my-button";
+import { DundeeButton } from "./dundee-button";
 
 export const Header = () => {
   return (
@@ -35,7 +35,7 @@ export const Header = () => {
             </li>
           </ul>
         </nav>
-        <MyButton>Schedule Now</MyButton>
+        <DundeeButton>Schedule Now</DundeeButton>
       </Container>
     </header>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MyButton } from "./my-button";
+import { DundeeButton } from "./dundee-button";
 
 export const Hero = () => {
   return (
@@ -17,7 +17,7 @@ export const Hero = () => {
         the Dundee Devs' custom software, mobile, and web development solutions
         for your brand.`}
       </p>
-      <MyButton>Treat Your Brand Now</MyButton>
+      <DundeeButton>Treat Your Brand Now</DundeeButton>
     </section>
   );
 };
