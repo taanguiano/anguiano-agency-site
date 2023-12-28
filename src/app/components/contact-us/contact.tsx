@@ -77,9 +77,17 @@ export const Contact = () => {
 
   return (
     <section className="h-[100vh] p-[var(--navigation-height)]" id="contact">
-      <div className="w-full bg-glass backdrop-blur-glass rounded-xl shadow-glass p-5 flex justify-around gap-5">
-        <div className="flex flex-col w-1/2">
-          <>
+      <div className="ml-auto mr-auto bg-glass backdrop-blur-glass rounded-xl shadow-glass pt-1 pl-20 pr-20 flex flex-col justify-center">
+        <div className="flex flex-row pt-5 pb-5">
+          <h1 className="text-3xl">
+            {`Curious? Drop us a line, and we'll fill you in on what we can do.`}
+          </h1>
+        </div>
+        <div className="flex flex-row border-t border-t-glass pb-5">
+          <div className="flex flex-col w-1/4 border-r border-r-glass pt-5 pb-5 pr-5">
+            left section
+          </div>
+          <div className="flex flex-col w-3/4 p-5">
             {step === steps.length ? (
               <ContactSuccess />
             ) : (
@@ -115,7 +123,7 @@ export const Contact = () => {
                 )}
               </Formik>
             )}
-          </>
+          </div>
         </div>
       </div>
     </section>
