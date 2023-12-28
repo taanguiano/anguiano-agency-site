@@ -14,7 +14,7 @@ const config: Config = {
       colors: {
         background: "#000212",
         white: "#fff",
-        glass: "rgba(16 18 27 / 40%)",
+        glass: "rgba( 0, 0, 0, 0.5 )",
         input: "#14162b",
       },
       fontSize: {

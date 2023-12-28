@@ -11,11 +11,11 @@ export const Header = () => {
   const { handleAnchorClick } = useAnchorClick();
 
   return (
-    <header className="w-fit backdrop-blur-glass bg-glass shadow-glass rounded-box ml-auto mr-auto p-2">
+    <header className="w-fit backdrop-blur-glass bg-glass shadow-glass rounded-box p-2 mt-5 ml-auto mr-auto sticky">
       <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
-        <Link className="flex items-center text-md" href="/">
+        {/* <Link className="flex items-center text-md" href="/">
           <Logo height={175} width={175} />
-        </Link>
+        </Link> */}
         <nav className="">
           <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
             <li>

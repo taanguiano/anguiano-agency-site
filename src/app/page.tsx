@@ -1,4 +1,4 @@
-import { Contact } from "./components/contact";
+import { Contact } from "./components/contact-us/contact";
 import { Container } from "./components/container";
 import { Hero } from "./components/hero";
 // import { ServicesBanner } from "./components/services-banner";

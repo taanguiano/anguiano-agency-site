@@ -14,15 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="dark" className="bg-primary-gradient">
       <head>
         <meta
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1"
         />
       </head>
-      <body className="overflow-x-hidden bg-primary-gradient">
-        <div className="">
+      <body className="overflow-x-hidden">
+        <div>
           <Header />
           <div className="pt-[var(--navigation-height)]">{children}</div>
           <footer>
