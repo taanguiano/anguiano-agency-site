@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.44.0",
     "@tailwindcss/typography": "^0.5.10",
     "classnames": "^2.3.2",
-    "daisyui": "^4.4.23",
+    "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
     "formik": "^2.4.5",
     "next": "14.0.3",
     "react": "^18",
-    "react-daisyui": "^5.0.0",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",
     "react-hook-form": "^7.49.2",

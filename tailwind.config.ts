@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
@@ -14,8 +15,17 @@ const config: Config = {
       colors: {
         background: "#0F0A19",
         white: "#fff",
-        glass: "rgba( 0, 0, 0, 0.5 )",
-        input: "#14162b",
+        glass: "rgba(17, 25, 40, 0.75)",
+        input: "#1f2a37",
+        primary: "#F87000",
+        secondary: "#A740C1",
+        accent: "#0244BB",
+        neutral: "#415058",
+        "base-100": "#0F0A19",
+        info: "#ffffff",
+        success: "#5EB234",
+        warning: "#E8B130",
+        error: "#C91D2B",
       },
       fontSize: {
         sm: "1.4rem",
@@ -53,27 +63,21 @@ const config: Config = {
           "linear-gradient(135deg,color(display-p3 .6196078431 .4784313725 1/1) 0%,color(display-p3 .9960784314 .5450980392 .7333333333/1) 33.33%,color(display-p3 1 .7411764706 .4784313725/1) 66.67%,color(display-p3 .9725490196 .9176470588 .7647058824/1) 100%);",
       },
       boxShadow: {
-        glass: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+        glass: "0 8px 22px 0 rgba( 31, 38, 135, 0.37 )",
       },
       borderColor: {
-        glass: "rgba( 255, 255, 255, 0.18 )",
+        glass: "rgba(255, 255, 255, 0.125)",
       },
       backdropBlur: {
         glass: "4px",
       },
+      borderRadius: {
+        glass: "12px",
+      },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
-  daisyui: {
-    themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    darkTheme: "dark", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ":root", // The element that receives theme color CSS variables
-  },
+  plugins: [require("@tailwindcss/typography"), require("flowbite/plugin")],
+  darkMode: "class",
 };
 export default config;
 
@@ -84,9 +88,12 @@ export default config;
 // --sage: #a5a58dff;
 // --reseda-green: #6b705cff;
 
-// background: rgba( 0, 0, 0, 0.4 );
-// box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-// backdrop-filter: blur( 4px );
-// -webkit-backdrop-filter: blur( 4px );
-// border-radius: 10px;
-// border: 1px solid rgba( 255, 255, 255, 0.18 );
+// primary: "#F87000",
+// secondary: "#A740C1",
+// accent: "#0244BB",
+// neutral: "#415058",
+// "base-100": "#0F0A19",
+// info: "#ffffff",
+// success: "#5EB234",
+// warning: "#E8B130",
+// error: "#C91D2B",

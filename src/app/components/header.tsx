@@ -6,47 +6,58 @@ import { Container } from "./container";
 import { Logo } from "./icons/logo";
 import { DundeeButton } from "./dundee-button";
 import { useAnchorClick } from "../hooks/useAnchorClick";
+import gradientEllipse from "../../../public/gradientEllipse.svg";
+import Image from "next/image";
 
 export const Header = () => {
   const { handleAnchorClick } = useAnchorClick();
 
   return (
-    <header className="w-fit backdrop-blur-glass bg-glass shadow-glass rounded-box p-2 mt-5 ml-auto mr-auto sticky">
-      <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
-        {/* <Link className="flex items-center text-md" href="/">
+    <>
+      <Image
+        className="absolute top-[-700px] left-[500px]"
+        src={gradientEllipse}
+        width={1100}
+        alt="radial-gradient"
+      />
+      <header className="w-fit backdrop-blur-glass bg-glass rounded-glass border border-glass p-2 mt-5 ml-auto mr-auto sticky">
+        <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
+          {/* <Link className="flex items-center text-md" href="/">
           <Logo height={175} width={175} />
         </Link> */}
-        <nav className="">
-          <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
-            <li>
-              <Link href="" onClick={() => handleAnchorClick("process")}>
-                Process
-              </Link>
-            </li>
-            <li>
-              <Link href="">Services</Link>
-            </li>
-            <li>
-              <Link href="">Why Us</Link>
-            </li>
-            <li>
-              <Link href="">Projects</Link>
-            </li>
-            <li>
-              <Link href="">Pricing</Link>
-            </li>
-            <li>
-              <Link href="">FAQs</Link>
-            </li>
-          </ul>
-        </nav>
-        <button
-          className="btn btn-primary"
-          onClick={() => handleAnchorClick("contact")}
-        >
-          Schedule Now
-        </button>
-      </Container>
-    </header>
+          <nav className="text-info">
+            <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
+              <li>
+                <Link href="" onClick={() => handleAnchorClick("process")}>
+                  Process
+                </Link>
+              </li>
+              <li>
+                <Link href="">Services</Link>
+              </li>
+              <li>
+                <Link href="">Why Us</Link>
+              </li>
+              <li>
+                <Link href="">Projects</Link>
+              </li>
+              <li>
+                <Link href="">Pricing</Link>
+              </li>
+              <li>
+                <Link href="">FAQs</Link>
+              </li>
+            </ul>
+          </nav>
+          <button
+            type="button"
+            onClick={() => handleAnchorClick("contact")}
+            className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
+          >
+            Schedule Now
+          </button>
+        </Container>
+      </header>
+    </>
   );
 };

@@ -9,9 +9,9 @@ export const Hero = () => {
 
   return (
     <section className="text-center h-[calc(100vh-var(--navigation-height))] pt-[125px]">
-      <span className="text-[72px] my-5 bg-hero-title-gradient bg-clip-text text-transparent leading-tight italic">
+      <span className="text-[72px] my-5 bg-info bg-clip-text text-transparent leading-tight">
         Wix? Wordpress? Nah. Your Business{" "}
-        <span className="bg-emphasized-hero-gradient bg-clip-text text-transparent font-extrabold">
+        <span className="bg-primary bg-clip-text text-transparent font-extrabold italic">
           Deserves Better.
         </span>
       </span>
@@ -21,8 +21,9 @@ export const Hero = () => {
         for your brand.`}
       </p>
       <button
-        className="btn btn-lg btn-primary"
+        type="button"
         onClick={() => handleAnchorClick("contact")}
+        className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
       >
         Treat Your Brand Now
       </button>

@@ -16,6 +16,9 @@ import {
 } from "./utils/contact-us-utils";
 import { ReviewContact } from "./components/review-contact";
 import { ContactSuccess } from "./components/contact-success";
+import classnames from "classnames";
+import { IconRefresh } from "@tabler/icons-react";
+import { ContactStepper } from "./components/contact-stepper";
 
 const steps = [
   "Personal Info",
@@ -75,17 +78,27 @@ export const Contact = () => {
     setStep(step - 1);
   };
 
+  const handleReset = (resetForm: () => void) => {
+    resetForm();
+    setStep(0);
+  };
+
+  const getStepperClasses = (stepIndex: number) => {
+    return classnames("step", { "step-primary": stepIndex === step });
+  };
+
   return (
     <section className="h-[100vh] p-[var(--navigation-height)]" id="contact">
-      <div className="ml-auto mr-auto bg-glass backdrop-blur-glass rounded-xl shadow-glass pt-1 pl-20 pr-20 flex flex-col justify-center">
-        <div className="flex flex-row pt-5 pb-5">
-          <h1 className="text-3xl">
+      <div className="ml-auto mr-auto bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
+        <div className="pt-5 pb-5 flex flex-col gap-3">
+          <h1 className="text-[25px] font-semibold text-info">
             {`Curious? Drop us a line, and we'll fill you in on what we can do.`}
           </h1>
+          <p className="text-sm">{`Kindly provide your details following the steps below.`}</p>
         </div>
         <div className="flex flex-row border-t border-t-glass pb-5">
-          <div className="flex flex-col w-1/4 border-r border-r-glass pt-5 pb-5 pr-5">
-            left section
+          <div className="flex flex-col w-1/4 border-r border-r-glass pt-5 pb-5 pr-5 text-info">
+            <ContactStepper />
           </div>
           <div className="flex flex-col w-3/4 p-5">
             {step === steps.length ? (
@@ -98,25 +111,32 @@ export const Contact = () => {
                 ) => handleSubmit(values, actions)}
                 initialValues={contactFormInitialValues}
               >
-                {({ isSubmitting }) => (
+                {({ isSubmitting, resetForm }) => (
                   <Form action={web3FormsLink} method="POST" id="contact-form">
                     {getCurrentPage(step)}
                     <div className="flex flex-row">
                       {step > 0 && (
                         <button
-                          className="btn btn-primary w-fit"
-                          onClick={() => handleBack()}
                           type="button"
+                          onClick={() => handleBack()}
+                          className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
                         >
                           Back
                         </button>
                       )}
                       <button
-                        className="btn btn-primary w-fit"
+                        className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
                         disabled={isSubmitting}
                         type="submit"
                       >
                         {isLastStep ? "Submit" : "Next"}
+                      </button>
+                      <button
+                        type="reset"
+                        className="text-white bg-neutral hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5 absolute top-5 right-5"
+                        onClick={() => handleReset(resetForm)}
+                      >
+                        <IconRefresh />
                       </button>
                     </div>
                   </Form>
