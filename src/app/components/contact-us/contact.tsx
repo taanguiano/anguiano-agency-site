@@ -10,8 +10,7 @@ import {
   web3FormsLink,
 } from "./utils/contact-us-utils";
 import { ContactSuccess } from "./components/contact-success";
-import { IconRefresh } from "@tabler/icons-react";
-import { ContactStepper } from "./components/contact-stepper";
+import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
 
 const steps = [
   "Personal Info",
@@ -42,14 +41,6 @@ export const Contact = () => {
   return (
     <section className="h-[100vh] p-[var(--navigation-height)]" id="contact">
       <div className="ml-auto mr-auto bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
-        <div className="flex flex-row justify-center">
-          <div className="w-fit py-5 flex flex-col gap-1 items-center">
-            <h1 className="text-[25px] font-semibold text-info">
-              {`Curious? Drop us a line, and we'll fill you in on what we can do.`}{" "}
-            </h1>
-            <p className="text-sm">{`What services are you looking for?`}</p>
-          </div>
-        </div>
         <div className="flex flex-row pb-5">
           <div className="flex flex-col w-full p-5">
             <Formik
@@ -64,11 +55,12 @@ export const Contact = () => {
                   <PersonalInfoForm />
                   <div className="flex flex-row justify-end gap-3">
                     <button
-                      className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
+                      className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5 w-fit"
                       disabled={isSubmitting}
                       type="submit"
                     >
                       Submit
+                      <IconArrowRight />
                     </button>
                   </div>
                   <button

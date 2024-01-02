@@ -11,10 +11,10 @@ export const contactFormInitialValues: ContactFormValues = {
   needsMobileAppDevelopment: false,
   needsSeoConsulting: false,
   needsAiConsulting: false,
+  projectDescription: "",
   startDate: "",
   endDate: "",
   budget: "",
-  description: "",
 };
 
 export type ContactFormValues = {
@@ -27,10 +27,10 @@ export type ContactFormValues = {
   needsMobileAppDevelopment: boolean;
   needsSeoConsulting: boolean;
   needsAiConsulting: boolean;
+  projectDescription: string;
   startDate: string;
   endDate: string;
   budget: string;
-  description: string;
 };
 
 export type ContactFormField = {
@@ -42,7 +42,6 @@ export type ContactFormField = {
 export const sendWeb3Email = async (contactFormValues: ContactFormValues) => {
   let formData = new FormData();
   Object.entries(contactFormValues).forEach((formValue) => {
-    console.log(formValue);
     formData.append(formValue[0], formValue[1].toString());
   });
   formData.append("access_key", web3FormsPublicAccessKey);
