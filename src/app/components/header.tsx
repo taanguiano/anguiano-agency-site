@@ -3,11 +3,10 @@
 import Link from "next/link";
 import React from "react";
 import { Container } from "./container";
-import { Logo } from "./icons/logo";
-import { DundeeButton } from "./dundee-button";
 import { useAnchorClick } from "../hooks/useAnchorClick";
 import gradientEllipse from "../../../public/gradientEllipse.svg";
 import Image from "next/image";
+import Elmware from "../../../public/elmwareSvgOrange.svg";
 
 export const Header = () => {
   const { handleAnchorClick } = useAnchorClick();
@@ -15,36 +14,38 @@ export const Header = () => {
   return (
     <>
       <Image
-        className="absolute top-[-700px] left-[500px]"
+        className="absolute top-[-700px] left-[500px] z-[-1]"
         src={gradientEllipse}
         width={1100}
         alt="radial-gradient"
       />
-      <header className="w-fit backdrop-blur-glass bg-glass rounded-glass border border-glass p-2 mt-5 ml-auto mr-auto sticky">
+      <header className=" w-full fixed backdrop-blur-glass bg-transparent border-b border-b-glass z-10">
         <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
-          {/* <Link className="flex items-center text-md" href="/">
-          <Logo height={175} width={175} />
-        </Link> */}
           <nav className="text-info">
             <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
               <li>
+                <Link className="" href="/">
+                  <Image src={Elmware} height={100} width={100} alt="logo" />
+                </Link>
+              </li>
+              <li className="pt-[4px]">
                 <Link href="" onClick={() => handleAnchorClick("process")}>
                   Process
                 </Link>
               </li>
-              <li>
+              <li className="pt-[4px]">
                 <Link href="">Services</Link>
               </li>
-              <li>
+              <li className="pt-[4px]">
                 <Link href="">Why Us</Link>
               </li>
-              <li>
+              <li className="pt-[4px]">
                 <Link href="">Projects</Link>
               </li>
-              <li>
+              <li className="pt-[4px]">
                 <Link href="">Pricing</Link>
               </li>
-              <li>
+              <li className="pt-[4px]">
                 <Link href="">FAQs</Link>
               </li>
             </ul>
@@ -54,7 +55,7 @@ export const Header = () => {
             onClick={() => handleAnchorClick("contact")}
             className="text-white bg-primary hover:opacity-80 font-medium rounded-lg text-sm px-5 py-2.5"
           >
-            Schedule Now
+            Contact Us
           </button>
         </Container>
       </header>

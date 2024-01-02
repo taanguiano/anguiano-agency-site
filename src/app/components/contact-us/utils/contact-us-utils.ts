@@ -5,7 +5,12 @@ export const contactFormInitialValues: ContactFormValues = {
   name: "",
   email: "",
   phone: "",
-  nameOnCard: "",
+  needsCustomSoftware: false,
+  needsUiUxDesign: false,
+  needsWebDevelopment: false,
+  needsMobileAppDevelopment: false,
+  needsSeoConsulting: false,
+  needsAiConsulting: false,
   startDate: "",
   endDate: "",
   budget: "",
@@ -16,7 +21,12 @@ export type ContactFormValues = {
   name: string;
   email: string;
   phone: string;
-  nameOnCard: string;
+  needsCustomSoftware: boolean;
+  needsUiUxDesign: boolean;
+  needsWebDevelopment: boolean;
+  needsMobileAppDevelopment: boolean;
+  needsSeoConsulting: boolean;
+  needsAiConsulting: boolean;
   startDate: string;
   endDate: string;
   budget: string;
@@ -33,7 +43,7 @@ export const sendWeb3Email = async (contactFormValues: ContactFormValues) => {
   let formData = new FormData();
   Object.entries(contactFormValues).forEach((formValue) => {
     console.log(formValue);
-    formData.append(formValue[0], formValue[1]);
+    formData.append(formValue[0], formValue[1].toString());
   });
   formData.append("access_key", web3FormsPublicAccessKey);
   formData.append("from_name", "Dundee Development");

@@ -13,7 +13,7 @@ const config: Config = {
         sans: '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
       },
       colors: {
-        background: "#0F0A19",
+        background: "#05051e",
         white: "#fff",
         glass: "rgba(17, 25, 40, 0.75)",
         input: "#1f2a37",

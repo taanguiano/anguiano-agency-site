@@ -10,14 +10,14 @@ export const Hero = () => {
   return (
     <section className="text-center h-[calc(100vh-var(--navigation-height))] pt-[125px]">
       <span className="text-[72px] my-5 bg-info bg-clip-text text-transparent leading-tight">
-        Wix? Wordpress? Nah. Your Business{" "}
+        Wix? Wordpress? No. Your Business Deserves{" "}
         <span className="bg-primary bg-clip-text text-transparent font-extrabold italic">
-          Deserves Better.
+          Custom.
         </span>
       </span>
       <p className="text-lg my-8">
         {`Crafted with care, not just clicked together. Experience the impact of
-        the Dundee Devs' custom software, mobile, and web development solutions
+        the Elmwood Engineers' custom software, mobile, and web development solutions
         for your brand.`}
       </p>
       <button
