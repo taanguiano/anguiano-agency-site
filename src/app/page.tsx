@@ -1,5 +1,5 @@
 import { Contact } from "./pages/contact-us/contact";
-import { Container } from "./components/container";
+import { Container } from "./global-components/container";
 import { Faqs } from "./pages/faqs/faqs";
 import { Hero } from "./pages/hero";
 import { Pricing } from "./pages/pricing/pricing";

@@ -11,7 +11,7 @@ import {
 } from "./utils/contact-us-utils";
 import { ContactSuccess } from "./components/contact-success";
 import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
-import { Container } from "../../components/container";
+import { Container } from "../../global-components/container";
 
 const steps = [
   "Personal Info",
