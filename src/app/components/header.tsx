@@ -8,6 +8,14 @@ import gradientEllipse from "../../../public/gradientEllipse.svg";
 import Image from "next/image";
 import Elmware from "../../../public/elmwareSvgOrange.svg";
 
+const navItems = [
+  { title: "Process", anchor: "process" },
+  { title: "Services", anchor: "services" },
+  { title: "Why Us", anchor: "why-us" },
+  { title: "Pricing", anchor: "pricing" },
+  { title: "FAQs", anchor: "faqs" },
+];
+
 export const Header = () => {
   const { handleAnchorClick } = useAnchorClick();
 
@@ -28,26 +36,21 @@ export const Header = () => {
                   <Image src={Elmware} height={100} width={100} alt="logo" />
                 </Link>
               </li>
-              <li className="pt-[4px]">
-                <Link href="" onClick={() => handleAnchorClick("process")}>
-                  Process
-                </Link>
-              </li>
-              <li className="pt-[4px]">
-                <Link href="">Services</Link>
-              </li>
-              <li className="pt-[4px]">
-                <Link href="">Why Us</Link>
-              </li>
-              <li className="pt-[4px]">
-                <Link href="">Projects</Link>
-              </li>
-              <li className="pt-[4px]">
-                <Link href="">Pricing</Link>
-              </li>
-              <li className="pt-[4px]">
-                <Link href="">FAQs</Link>
-              </li>
+              {navItems.map((navItem, index) => {
+                return (
+                  <li
+                    key={`${navItem.anchor}-${index}`}
+                    className="pt-[4px] hover:text-primary"
+                  >
+                    <Link
+                      href=""
+                      onClick={() => handleAnchorClick(navItem.anchor)}
+                    >
+                      {navItem.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <button

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { DundeeButton } from "./dundee-button";
+import { DundeeButton } from "../components/dundee-button";
 import { useAnchorClick } from "../hooks/useAnchorClick";
 
 export const Hero = () => {

@@ -11,6 +11,7 @@ import {
 } from "./utils/contact-us-utils";
 import { ContactSuccess } from "./components/contact-success";
 import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
+import { Container } from "../../components/container";
 
 const steps = [
   "Personal Info",
@@ -39,8 +40,8 @@ export const Contact = () => {
   };
 
   return (
-    <section className="h-[100vh] p-[var(--navigation-height)]" id="contact">
-      <div className="ml-auto mr-auto bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
+    <div id="contact" className="h-[100vh] pt-[var(--navigation-height)]">
+      <div className="bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
         <div className="flex flex-row pb-5">
           <div className="flex flex-col w-full p-5">
             <Formik
@@ -59,8 +60,9 @@ export const Contact = () => {
                       disabled={isSubmitting}
                       type="submit"
                     >
-                      Submit
-                      <IconArrowRight />
+                      <span className="flex flex-row justify-between items-center">
+                        Submit
+                      </span>
                     </button>
                   </div>
                   <button
@@ -76,6 +78,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
