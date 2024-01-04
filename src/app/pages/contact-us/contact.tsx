@@ -12,6 +12,7 @@ import {
 import { ContactSuccess } from "./components/contact-success";
 import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
 import { Container } from "../../global-components/container";
+import { Card } from "@/app/global-components/card";
 
 const steps = [
   "Personal Info",
@@ -41,7 +42,7 @@ export const Contact = () => {
 
   return (
     <div id="contact" className="h-[100vh] pt-[var(--navigation-height)]">
-      <div className="bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
+      <Card className="bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
         <div className="flex flex-row pb-5">
           <div className="flex flex-col w-full p-5">
             <Formik
@@ -77,7 +78,7 @@ export const Contact = () => {
             </Formik>
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   );
 };

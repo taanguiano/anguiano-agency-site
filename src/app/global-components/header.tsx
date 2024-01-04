@@ -4,9 +4,8 @@ import Link from "next/link";
 import React from "react";
 import { Container } from "./container";
 import { useAnchorClick } from "../hooks/useAnchorClick";
-import gradientEllipse from "../../../public/gradientEllipse.svg";
 import Image from "next/image";
-import Elmware from "../../../public/elmwareSvgOrange.svg";
+import pohpiwareFullLogo from "../../../public/pohpiwareFullLogo.svg";
 
 const navItems = [
   { title: "Process", anchor: "process" },
@@ -21,19 +20,18 @@ export const Header = () => {
 
   return (
     <>
-      <Image
-        className="absolute top-[-700px] left-[500px] z-[-1]"
-        src={gradientEllipse}
-        width={1100}
-        alt="radial-gradient"
-      />
       <header className=" w-full fixed backdrop-blur-glass bg-transparent border-b border-b-glass z-10">
         <Container className="flex justify-between items-center h-[var(--navigation-height)] py-[26px]">
           <nav className="text-info">
-            <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3">
+            <ul className="flex h-full [&_a]:text-sm [&_li]:ml-3 [&_li]:mr-3 items-end">
               <li>
                 <Link className="" href="/">
-                  <Image src={Elmware} height={100} width={100} alt="logo" />
+                  <Image
+                    src={pohpiwareFullLogo}
+                    height={125}
+                    width={125}
+                    alt="logo"
+                  />
                 </Link>
               </li>
               {navItems.map((navItem, index) => {

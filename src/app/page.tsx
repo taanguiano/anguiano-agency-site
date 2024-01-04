@@ -1,11 +1,14 @@
+"use client";
+
 import { Contact } from "./pages/contact-us/contact";
 import { Container } from "./global-components/container";
 import { Faqs } from "./pages/faqs/faqs";
-import { Hero } from "./pages/hero";
+import { Hero } from "./pages/hero/hero";
 import { Pricing } from "./pages/pricing/pricing";
 import { Process } from "./pages/process/process";
 import { Services } from "./pages/services/services";
 import { WhyUs } from "./pages/why-us/why-us";
+import { CLientLogos } from "./global-components/client-logos";
 // import { ServicesBanner } from "./components/services-banner";
 
 export default function Home() {
@@ -15,7 +18,7 @@ export default function Home() {
         <Container>
           <Hero />
         </Container>
-        {/* <ServicesBanner /> */}
+        <CLientLogos />
         <Container>
           <Process />
           <Services />

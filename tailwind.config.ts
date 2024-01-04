@@ -10,10 +10,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: '"SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu, Cantarell,"Open Sans","Helvetica Neue",sans-serif',
+        sans: '"Inter"',
       },
       colors: {
-        background: "#05051e",
+        background: "#181b20",
         white: "#fff",
         glass: "rgba(17, 25, 40, 0.75)",
         input: "#1f2a37",
@@ -26,6 +26,14 @@ const config: Config = {
         success: "#5EB234",
         warning: "#E8B130",
         error: "#C91D2B",
+        logoClear: "rgba(255, 255, 255, 0.40)",
+        pText: "#d0d6de",
+        "pixie-powder": "#2E1B86",
+        grape: "#7723AC",
+        "medium-orchid": "#B053CB",
+        "yellow-orange": "#FFA84C",
+        sunglow: "#FED338",
+        "lemon-glacier": "#FEFD00",
       },
       fontSize: {
         sm: "1.4rem",
@@ -60,7 +68,9 @@ const config: Config = {
         "header-radial-gradient":
           "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)",
         "emphasized-hero-gradient":
-          "linear-gradient(135deg,color(display-p3 .6196078431 .4784313725 1/1) 0%,color(display-p3 .9960784314 .5450980392 .7333333333/1) 33.33%,color(display-p3 1 .7411764706 .4784313725/1) 66.67%,color(display-p3 .9725490196 .9176470588 .7647058824/1) 100%);",
+          "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
+        // "emphasized-hero-gradient":
+        //   "linear-gradient(to right, #90abf5, #a5d7ce)",
       },
       boxShadow: {
         glass: "0 8px 22px 0 rgba( 31, 38, 135, 0.37 )",
