@@ -47,10 +47,10 @@ const clients = [
 export const CLientLogos = () => {
   return (
     <>
-      <div className="flex flex-row justify-center text-logoClear text-lg">
+      {/* <div className="flex flex-row justify-center text-logoClear text-lg">
         Trusted by:
-      </div>
-      <div className="flex flex-row mt-[25px]">
+      </div> */}
+      <div className="flex flex-row mt-[250px]">
         <Marquee direction="right" speed={50} pauseOnHover autoFill>
           {clients.map((client, index) => {
             return (
