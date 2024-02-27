@@ -11,7 +11,6 @@ import {
 } from "./utils/contact-us-utils";
 import { ContactSuccess } from "./components/contact-success";
 import { IconArrowRight, IconRefresh } from "@tabler/icons-react";
-import { Container } from "../../global-components/container";
 import { Card } from "@/app/global-components/card";
 
 const steps = [
@@ -23,7 +22,7 @@ const steps = [
   "Review",
 ];
 
-export const Contact = () => {
+export default function Page() {
   const submitForm = (
     values: ContactFormValues,
     actions: FormikHelpers<ContactFormValues>
@@ -42,6 +41,13 @@ export const Contact = () => {
 
   return (
     <div id="contact" className="h-[100vh] pt-[var(--navigation-height)]">
+      <div className="w-fit mx-auto text-center">
+        <div className="border border-gray-100 py-[4px] px-[12px] rounded-lg font-semibold text-sm bg-black shadow-lg">
+          Reach out to us
+        </div>
+        <h2>sdfg</h2>
+        <p>gfds</p>
+      </div>
       <Card className="bg-glass backdrop-blur-glass rounded-xl pt-1 pl-20 pr-20 flex flex-col justify-center border border-glass">
         <div className="flex flex-row pb-5">
           <div className="flex flex-col w-full p-5">
@@ -81,4 +87,4 @@ export const Contact = () => {
       </Card>
     </div>
   );
-};
+}

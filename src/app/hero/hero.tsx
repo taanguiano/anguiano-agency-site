@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { useAnchorClick } from "../../hooks/useAnchorClick";
-import heroImage from "../../../../public/heroImage2.png";
+import { useAnchorClick } from "../hooks/useAnchorClick";
+import heroImage from "../../../public/heroImage2.png";
 import Image from "next/image";
+import { Boxes } from "../global-components/background-boxes/background-boxes";
 
 export const Hero = () => {
   const { handleAnchorClick } = useAnchorClick();
@@ -23,9 +24,9 @@ export const Hero = () => {
         <button
           type="button"
           onClick={() => handleAnchorClick("contact")}
-          className="text-background bg-emphasized-hero-gradient hover:opacity-80 font-medium rounded-2xl text-sm px-5 py-3"
+          className="text-white bg-emphasized-hero-gradient hover:opacity-80 font-medium rounded-2xl text-sm px-5 py-3"
         >
-          Treat Your Brand Now
+          Get Started
         </button>
       </div>
       <Image

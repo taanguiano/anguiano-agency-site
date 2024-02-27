@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -35,12 +38,6 @@ const config: Config = {
         sunglow: "#FED338",
         "lemon-glacier": "#FEFD00",
       },
-      fontSize: {
-        sm: "1.4rem",
-        md: "1.6rem",
-        lg: ["2.2rem", "1.3"],
-        "5xl": ["8rem", "1"],
-      },
       spacing: {
         0: "0",
         1: "0.4rem",
@@ -63,14 +60,15 @@ const config: Config = {
       backgroundImage: {
         "primary-gradient":
           "radial-gradient(circle, #845ec2, #0078d1, #0086c1, #008d9f, #008f7a)",
-        "hero-title-gradient":
-          "linear-gradient(180deg,color(display-p3 .9411764706 .9333333333 .9764705882/.8) 0%,color(display-p3 .8862745098 .9098039216 1/1) 100%)",
+        "hero-title-gradient": "linear-gradient(#fff,#d5d9e5)",
         "header-radial-gradient":
           "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)",
         "emphasized-hero-gradient":
-          "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
-        // "emphasized-hero-gradient":
-        //   "linear-gradient(to right, #90abf5, #a5d7ce)",
+          "linear-gradient(-58deg, #35B1A1 30.16%, #0078B5 43.02%, #404BC1 56.61%, #EB07E0 69.99%)",
+        "nav-border":
+          "linear-gradient(90deg, rgba(45,45,48,0), #2d2d30 35%, #2d2d30 65%, rgba(45,45,48,0))",
+        // "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
+        // "linear-gradient(to right, #90abf5, #a5d7ce)",
       },
       boxShadow: {
         glass: "0 8px 22px 0 rgba( 31, 38, 135, 0.37 )",
@@ -86,24 +84,23 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("flowbite/plugin")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("flowbite/plugin"),
+    addVariablesForColors,
+  ],
   darkMode: "class",
 };
 export default config;
 
-// --buff: #cb997eff;
-// --desert-sand: #ddbea9ff;
-// --champagne-pink: #ffe8d6ff;
-// --ash-gray: #b7b7a4ff;
-// --sage: #a5a58dff;
-// --reseda-green: #6b705cff;
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
 
-// primary: "#F87000",
-// secondary: "#A740C1",
-// accent: "#0244BB",
-// neutral: "#415058",
-// "base-100": "#0F0A19",
-// info: "#ffffff",
-// success: "#5EB234",
-// warning: "#E8B130",
-// error: "#C91D2B",
+  addBase({
+    ":root": newVars,
+  });
+}

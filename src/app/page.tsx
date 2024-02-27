@@ -1,31 +1,26 @@
 "use client";
 
-import { Contact } from "./pages/contact-us/contact";
 import { Container } from "./global-components/container";
-import { Faqs } from "./pages/faqs/faqs";
-import { Hero } from "./pages/hero/hero";
-import { Pricing } from "./pages/pricing/pricing";
-import { Process } from "./pages/process/process";
-import { Services } from "./pages/services/services";
-import { WhyUs } from "./pages/why-us/why-us";
+import { Faqs } from "./faqs/faqs";
+import { Hero } from "./hero/hero";
+import { Pricing } from "./pricing/pricing";
+import { Process } from "./process/process";
+import { OurServices } from "./our-services/services";
+import { WhyUsHome } from "./why-us/why-us-home";
 import { CLientLogos } from "./global-components/client-logos";
+import { OurWorkHome } from "./our-work/components/our-work-home";
 // import { ServicesBanner } from "./components/services-banner";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <Container>
-          <Hero />
-        </Container>
+        <Hero />
         <CLientLogos />
         <Container>
-          <Process />
-          <Services />
-          <WhyUs />
-          <Pricing />
-          <Faqs />
-          <Contact />
+          <WhyUsHome />
+          <OurWorkHome />
+          <OurServices />
         </Container>
       </main>
     </div>

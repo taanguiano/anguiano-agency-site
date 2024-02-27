@@ -3,17 +3,21 @@ import smallMedSolLogoClear from "../../../public/medSolLogoClear.svg";
 import unoLogoClear from "../../../public/unoLogoClear.svg";
 import fusionLogoClear from "../../../public/fusionLogoClear.svg";
 import fiservLogoClear from "../../../public/fiservLogoClear.svg";
+import theCrackCrewLogoClear from "../../../public/theCrackCrewLogoFull.svg";
+import fmpLogoClear from "../../../public/fmpClearLogoFull.svg";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-enum clientNames {
+export enum clientNames {
   UNO = "University of Nebraska At Omaha",
   Fiserv = "Fiserv",
   Fusion = "Fusion Medical Staffing",
   MedSol = "Medical Solutions",
+  TheCrackCrew = "The Crack Crew Mobile",
+  FusionMarketplace = "Fusion Marketplace",
 }
 
-const clients = [
+export const clients = [
   {
     name: clientNames.UNO,
     img: unoLogoClear,
@@ -47,29 +51,31 @@ const clients = [
 export const CLientLogos = () => {
   return (
     <>
-      {/* <div className="flex flex-row justify-center text-logoClear text-lg">
-        Trusted by:
-      </div> */}
-      <div className="flex flex-row mt-[250px]">
-        <Marquee direction="right" speed={50} pauseOnHover autoFill>
-          {clients.map((client, index) => {
-            return (
-              <div
-                key={`${client.name}-${index}`}
-                className="w-full px-4 mb-4 flex flex-col justify-end items-center"
-              >
-                <Image
-                  className="hover: cursor-pointer"
-                  onClick={() => window.open(client.href, "_blank")}
-                  height={client.imgHeight}
-                  width={client.imgWidth}
-                  src={client.img}
-                  alt={`${client.name}-logo`}
-                />
-              </div>
-            );
-          })}
-        </Marquee>
+      <div className="mt-[75px]">
+        <div className="flex flex-col items-center">
+          <p className="pb-10 text-3xl text-white text-opacity-40">
+            Trusted by
+          </p>
+          <div className="flex flex-row">
+            {clients.map((client, index) => {
+              return (
+                <div
+                  key={`${client.name}-${index}`}
+                  className="w-full px-4 mb-4 flex flex-col justify-end items-center"
+                >
+                  <Image
+                    className="hover: cursor-pointer"
+                    onClick={() => window.open(client.href, "_blank")}
+                    height={client.imgHeight}
+                    width={client.imgWidth}
+                    src={client.img}
+                    alt={`${client.name}-logo`}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </>
   );
