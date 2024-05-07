@@ -62,7 +62,7 @@ export const WhyUsHome = () => {
       <div id="why-us" className="t-[var(--navigation-height)] pt-[190px]">
         <div className="flex flex-col">
           <div className="w-fit mx-auto text-center">
-            <div className="w-fit mx-auto border border-gray-100 py-[4px] px-[12px] rounded-xl font-semibold text-2xl bg-black shadow-lg">
+            <div className="w-fit mx-auto border border-gray-100 py-[1px] px-[12px] rounded-xl font-medium text-2xl bg-black shadow-lg">
               Why Us
             </div>
             <h2 className="text-[5rem] leading-[1.2] font-semibold my-5 bg-hero-title-gradient bg-clip-text text-transparent">

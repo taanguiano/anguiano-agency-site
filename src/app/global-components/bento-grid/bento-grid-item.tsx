@@ -15,7 +15,7 @@ export function BentoGridItem({
   icon?: React.ReactNode;
 }) {
   return (
-    <BackgroundGradient
+    <div
       containerClassName={cn(
         "row-span-1 rounded-2xl group/bento transition duration-200 shadow-2xl justify-between flex flex-col space-y-4 cursor-pointer",
         className
@@ -38,6 +38,6 @@ export function BentoGridItem({
           </div>
         </div>
       </div>
-    </BackgroundGradient>
+    </div>
   );
 }

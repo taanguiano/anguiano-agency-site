@@ -14,6 +14,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: '"Inter"',
+        kanit: ["Kanit", "sans-serif"],
       },
       colors: {
         background: "#181b20",
@@ -60,13 +61,15 @@ const config: Config = {
       backgroundImage: {
         "primary-gradient":
           "radial-gradient(circle, #845ec2, #0078d1, #0086c1, #008d9f, #008f7a)",
-        "hero-title-gradient": "linear-gradient(#fff,#d5d9e5)",
+        "hero-title-gradient": "linear-gradient(to right,#FD5244,#D12591)",
         "header-radial-gradient":
           "radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%)",
         "emphasized-hero-gradient":
           "linear-gradient(-58deg, #35B1A1 30.16%, #0078B5 43.02%, #404BC1 56.61%, #EB07E0 69.99%)",
         "nav-border":
           "linear-gradient(90deg, rgba(45,45,48,0), #2d2d30 35%, #2d2d30 65%, rgba(45,45,48,0))",
+        "nav-effect":
+          "linear-gradient(135deg, rgba(215, 237, 237, .08), rgba(204, 235, 235, 0))",
         // "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
         // "linear-gradient(to right, #90abf5, #a5d7ce)",
       },

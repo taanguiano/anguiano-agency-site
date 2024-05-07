@@ -18,9 +18,8 @@ export default function Home() {
         <Hero />
         <CLientLogos />
         <Container>
-          <WhyUsHome />
-          <OurWorkHome />
           <OurServices />
+          <OurWorkHome />
         </Container>
       </main>
     </div>
