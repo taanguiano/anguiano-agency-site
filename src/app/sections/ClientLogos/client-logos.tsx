@@ -1,12 +1,9 @@
 import React from "react";
-import smallMedSolLogoClear from "../../../public/medSolLogoClear.svg";
-import unoLogoClear from "../../../public/unoLogoClear.svg";
-import fusionLogoClear from "../../../public/fusionLogoClear.svg";
-import fiservLogoClear from "../../../public/fiservLogoClear.svg";
-import theCrackCrewLogoClear from "../../../public/theCrackCrewLogoFull.svg";
-import fmpLogoClear from "../../../public/fmpClearLogoFull.svg";
+import smallMedSolLogoClear from "../../../../public/medSolLogoClear.svg";
+import unoLogoClear from "../../../../public/unoLogoClear.svg";
+import fusionLogoClear from "../../../../public/fusionLogoClear.svg";
+import fiservLogoClear from "../../../../public/fiservLogoClear.svg";
 import Image from "next/image";
-import Marquee from "react-fast-marquee";
 
 export enum clientNames {
   UNO = "University of Nebraska At Omaha",
@@ -48,7 +45,7 @@ export const clients = [
   },
 ];
 
-export const CLientLogos = () => {
+export const ClientLogos = () => {
   return (
     <>
       <div className="mt-[75px]">

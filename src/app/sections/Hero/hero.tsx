@@ -1,17 +1,11 @@
 "use client";
 
 import React from "react";
-import { useAnchorClick } from "../hooks/useAnchorClick";
-import heroSection from "../../../public/heroSection.svg";
+import heroSection from "../../../../public/heroSection.svg";
 import Image from "next/image";
-import { Boxes } from "../global-components/background-boxes/background-boxes";
-import { Button } from "../global-components/moving-border/moving-border";
-import { BackgroundBeams } from "../global-components/backgorund-beams/background-beams";
 import { IconArrowRight } from "@tabler/icons-react";
 
 export const Hero = () => {
-  const { handleAnchorClick } = useAnchorClick();
-
   return (
     <section className="text-center mt-[75px]">
       <div className="mb-52">

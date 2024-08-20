@@ -1,7 +1,7 @@
 import { IconCode } from "@tabler/icons-react";
 import React from "react";
 
-export const OurServices = () => {
+export const Services = () => {
   return (
     <>
       <div

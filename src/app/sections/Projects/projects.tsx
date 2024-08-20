@@ -1,8 +1,8 @@
 import React from "react";
+import { useGetProjects } from "../../hooks/queries/useProjects";
 import { ProjectCard } from "./components/project-card";
-import { useGetProjects } from "../hooks/queries/useProjects";
 
-export const OurWorkHome = () => {
+export const Projects = () => {
   const { projects } = useGetProjects();
   return (
     <div

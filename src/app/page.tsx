@@ -1,21 +1,20 @@
 "use client";
 
 import { Container } from "./global-components/container";
-import { Hero } from "./hero/hero";
-import { OurServices } from "./our-services/services";
-import { CLientLogos } from "./global-components/client-logos";
-import { OurWorkHome } from "./our-work/our-work-home";
-// import { ServicesBanner } from "./components/services-banner";
+import { ClientLogos } from "./sections/ClientLogos/client-logos";
+import { Hero } from "./sections/Hero/hero";
+import { Projects } from "./sections/Projects/projects";
+import { Services } from "./sections/Services/services";
 
 export default function Home() {
   return (
     <div>
       <main>
         <Hero />
-        <CLientLogos />
+        <ClientLogos />
         <Container>
-          <OurServices />
-          <OurWorkHome />
+          <Services />
+          <Projects />
         </Container>
       </main>
     </div>
