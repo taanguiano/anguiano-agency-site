@@ -26,7 +26,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="overflow-x-hidden font-kanit">
+      <body className="overflow-x-hidden font-kanit ">
         <div>
           <Header />
           <div className="pt-[var(--navigation-height)]">{children}</div>

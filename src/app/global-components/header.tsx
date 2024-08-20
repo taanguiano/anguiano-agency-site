@@ -5,7 +5,7 @@ import React from "react";
 import { Container } from "./container";
 import { useAnchorClick } from "../hooks/useAnchorClick";
 import Image from "next/image";
-import elmwareFullLogo from "../../../public/elmwareBearLogo.svg";
+import tanguianoLogo from "../../../public/tanguianoLogo.svg";
 import { useRouter } from "next/navigation";
 import Routes from "../utils/routes";
 
@@ -21,22 +21,17 @@ export const Header = () => {
 
   return (
     <>
-      <header className=" mt-5 z-10">
+      <header className="mt-9 z-10">
         <Container className="">
           <nav className="text-info w-full flex justify-between">
             <Link className="" href="/">
-              <Image
-                src={elmwareFullLogo}
-                height={175}
-                width={175}
-                alt="logo"
-              />
+              <Image src={tanguianoLogo} height={50} width={50} alt="logo" />
             </Link>
             <button
               onClick={() => router.push(Routes.contactUs)}
-              className="bg-hero-title-gradient text-white py-2 px-4 rounded"
+              className="bg-hero-title-gradient text-white py-3 px-4 rounded-xl"
             >
-              Get Started
+              <span className="text-3xl">Hire Me</span>
             </button>
           </nav>
         </Container>

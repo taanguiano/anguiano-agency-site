@@ -19,16 +19,11 @@ export const Hero = () => {
           Now accepting clients. Contact Us&nbsp;
           <IconArrowRight />
         </div>
-        <h1 className="text-[6rem] leading-[1.2] font-medium my-5">
-          Your business deserves
-          <span className="bg-hero-title-gradient bg-clip-text text-transparent">
-            &nbsp;custom software.
-          </span>
+        <h1 className="text-[4rem] leading-[1.2] font-medium my-5 md:text-[6rem] flex-wrap">
+          I Design. I Develop. I Deliver.
         </h1>
-        <p className="text-2xl my-8 text-pText flex w-1/2 mx-auto">
-          {`Crafted with care, not just clicked together. Experience the impact of
-        the Elmwood Engineers' custom software, mobile, and web development solutions
-        for your brand.`}
+        <p className="text-2xl my-8 text-pText flex w-full justify-center mx-auto">
+          {`Driven to deliver results for your team.`}
         </p>
       </div>
       <Image

@@ -36,7 +36,7 @@ export const Footer = () => {
 
   return (
     <footer className="">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-screen-xl">
         <div className="flex flex-col items-center mb-64">
           <h2 className="text-[5rem] leading-[1.2] font-semibold my-5 flex justify-center text-center">
             Have an idea? <br /> {`Let's collaborate.`}
@@ -76,6 +76,7 @@ export const Footer = () => {
               </a>
             ))}
           </div>
+          <div className="absolute h-[10rem] blur-[120px] mx-auto w-[70%] bg-[#FD5244] z-[-1] left-0 right-0" />
         </div>
       </div>
     </footer>

@@ -22,7 +22,7 @@ const config: Config = {
         glass: "rgba(17, 25, 40, 0.75)",
         input: "#1f2a37",
         primary: "#F87000",
-        secondary: "#A740C1",
+        secondary: "#24272e",
         accent: "#0244BB",
         neutral: "#415058",
         "base-100": "#0F0A19",
@@ -70,11 +70,23 @@ const config: Config = {
           "linear-gradient(90deg, rgba(45,45,48,0), #2d2d30 35%, #2d2d30 65%, rgba(45,45,48,0))",
         "nav-effect":
           "linear-gradient(135deg, rgba(215, 237, 237, .08), rgba(204, 235, 235, 0))",
+        "web-design-dev-gradient":
+          "linear-gradient(201deg, rgba(63,39,173,1) 0%, rgba(180,0,255,1) 69%)",
+        "app-design-dev-gradient":
+          "linear-gradient(201deg, rgba(15,64,255,1) 0%, rgba(100,202,255,1) 69%)",
+        "seo-gradient":
+          "linear-gradient(201deg, rgba(0,130,143,1) 0%, rgba(0,255,184,1) 69%)",
+        "ai-gradient":
+          "linear-gradient(201deg, rgba(255,15,205,1) 0%, rgba(250,117,117,1) 69%)",
         // "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
         // "linear-gradient(to right, #90abf5, #a5d7ce)",
       },
       boxShadow: {
         glass: "0 8px 22px 0 rgba( 31, 38, 135, 0.37 )",
+        purple: "0 0 1px #4a148c",
+        blue: "0 0 1px #0d47a1",
+        green: "0 0 1px #1b5e20",
+        red: "0 0 1px #b71c1c",
       },
       borderColor: {
         glass: "rgba(255, 255, 255, 0.125)",
@@ -84,6 +96,9 @@ const config: Config = {
       },
       borderRadius: {
         glass: "12px",
+      },
+      brightness: {
+        servicesBrightness: "110%",
       },
     },
   },
