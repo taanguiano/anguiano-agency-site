@@ -23,6 +23,7 @@ const config: Config = {
         input: "#1f2a37",
         primary: "#F87000",
         secondary: "#24272e",
+        tertiary: "#3b444b",
         accent: "#0244BB",
         neutral: "#415058",
         "base-100": "#0F0A19",

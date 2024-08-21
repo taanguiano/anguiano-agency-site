@@ -45,14 +45,14 @@ export const Footer = () => {
             onClick={() => router.push(Routes.contactUs)}
             className="bg-hero-title-gradient hover:bg-blue-700 text-white py-2 px-4 rounded w-fit inline-text"
           >
-            Get Started
+            Hire Me
           </button>
         </div>
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+          <span className="text-xl text-gray-500 sm:text-center dark:text-gray-400">
+            © {new Date().getFullYear()}{" "}
             <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+              Tristan Anguiano
             </a>
             . All Rights Reserved.
           </span>

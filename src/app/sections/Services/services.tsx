@@ -6,7 +6,7 @@ export const Services = () => {
     <>
       <div
         id="our-services"
-        className="t-[var(--navigation-height)] pt-[190px] pb-[190px]"
+        className="t-[var(--navigation-height)] pt-[190px]"
       >
         <div className="flex flex-col">
           <div className="w-fit mx-auto text-center">

@@ -9,7 +9,7 @@ import { Services } from "./sections/Services/services";
 export default function Home() {
   return (
     <div>
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <ClientLogos />
         <Container>
