@@ -6,6 +6,7 @@ export const useDownloadFile = () => {
     var link = document.createElement("a");
     link.download = name;
     link.href = uri;
+    link.target = "_blank";
     link.click();
   }, []);
 
