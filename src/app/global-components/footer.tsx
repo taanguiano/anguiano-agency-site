@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Routes from "../utils/routes";
+// import Routes from "../utils/routes";
 import { useRouter } from "next/navigation";
 import {
   IconBrandGithub,
@@ -25,12 +25,12 @@ export const Footer = () => {
           <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold my-5 flex justify-center text-center">
             Have an idea? <br /> {`Let's collaborate.`}
           </h2>
-          <button
+          {/* <button
             onClick={() => router.push(Routes.contactUs)}
             className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl w-fit inline-text text-3xl mt-1"
           >
             Download My Resume
-          </button>
+          </button> */}
         </div>
         <div className="md:flex-row md:justify-between flex flex-col w-full items-center px-5">
           <span className="text-2xl text-center text-gray-400">
