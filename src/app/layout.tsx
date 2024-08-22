@@ -28,8 +28,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden font-kanit ">
         <div>
-          <Header />
-          <div className="pt-[var(--navigation-height)]">{children}</div>
+          <div className="">{children}</div>
           <Container>
             <Footer />
           </Container>

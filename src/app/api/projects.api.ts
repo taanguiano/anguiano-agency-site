@@ -12,7 +12,7 @@ export default class ProjectsApi {
         url: "https://buildertrend.net/summaryGrid.aspx",
         img: btDemo1,
         description: "A residential construction management platform.",
-        skills: ["React", "Styled Components", "React Query"],
+        skills: ["React", ".NET", "SQL", "C#", "Microsoft Webforms"],
       },
       {
         name: "ciro by Medical Solutions",
@@ -28,15 +28,23 @@ export default class ProjectsApi {
         img: fmsDemo1,
         description:
           "A job search application for traveling health professionals.",
-        skills: ["React", "Styled Components", "React Query"],
+        skills: ["React Native", "React", "Styled Components", "React Query"],
       },
       {
         name: "cSM by Medical Solutions",
         url: "https://shifts.ciro.co",
         img: csmDemo1,
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-        skills: ["React", "Styled Components", "React Query"],
+          "An application that allows travel health professionals to schedule Pro Re Nata (PRN/per-diem) work shifts at healthcare facilities.",
+        skills: [
+          "React",
+          "Styled Components",
+          "React Hook Form",
+          "Zustand",
+          "React Query",
+          "Redux",
+          "NodeJS",
+        ],
       },
     ];
   }

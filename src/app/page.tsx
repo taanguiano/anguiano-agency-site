@@ -1,6 +1,7 @@
 "use client";
 
 import { Container } from "./global-components/container";
+import { Header } from "./global-components/header";
 import { ClientLogos } from "./sections/ClientLogos/client-logos";
 import { Hero } from "./sections/Hero/hero";
 import { Projects } from "./sections/Projects/projects";
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <div>
       <main className="overflow-x-hidden">
+        <Header />
         <Hero />
         <ClientLogos />
         <Container>

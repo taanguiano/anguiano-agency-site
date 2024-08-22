@@ -10,16 +10,16 @@ export const Projects = () => {
       className="t-[var(--navigation-height)] pt-[190px] pb-[190px]"
     >
       <div className="flex flex-col">
-        <div className="w-fit mx-auto text-center pb-6">
+        <div className="w-fit mx-auto text-center">
           <div className="w-fit mx-auto border border-gray-100 py-[1px] px-[12px] rounded-xl font-medium text-2xl bg-black shadow-lg">
-            My Work
+            Projects
           </div>
-          <h2 className="text-[5rem] leading-[1.2] font-semibold mt-5">
-            Projects:
+          <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold mt-5">
+            What I've Built:
           </h2>
-          <p className="text-pText text-3xl">{`Even cooler subtitle here.`}</p>
+          <p className="text-pText text-3xl mt-2">{`Projects that define my experience.`}</p>
         </div>
-        <div className="md:gap-12 gap-6 flex-col flex items-center mt-12">
+        <div className="md:gap-12 gap-6 flex-col flex items-center mt-32">
           {projects.map((project, index) => {
             return (
               <ProjectCard key={project.name} {...project} index={index} />

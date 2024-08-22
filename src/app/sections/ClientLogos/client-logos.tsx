@@ -47,33 +47,29 @@ export const clients = [
 
 export const ClientLogos = () => {
   return (
-    <>
-      <div className="mt-[75px]">
-        <div className="flex flex-col items-center">
-          <p className="pb-10 text-3xl text-white text-opacity-40">
-            Trusted by
-          </p>
-          <div className="flex flex-row">
-            {clients.map((client, index) => {
-              return (
-                <div
-                  key={`${client.name}-${index}`}
-                  className="w-full px-4 mb-4 flex flex-col justify-end items-center"
-                >
-                  <Image
-                    className="hover: cursor-pointer"
-                    onClick={() => window.open(client.href, "_blank")}
-                    height={client.imgHeight}
-                    width={client.imgWidth}
-                    src={client.img}
-                    alt={`${client.name}-logo`}
-                  />
-                </div>
-              );
-            })}
-          </div>
+    <div className="mt-[75px]">
+      <div className="flex flex-col items-center">
+        <p className="pb-10 text-3xl text-white text-opacity-40">Trusted by</p>
+        <div className="flex flex-row">
+          {clients.map((client, index) => {
+            return (
+              <div
+                key={`${client.name}-${index}`}
+                className="w-full px-4 mb-4 flex flex-col justify-end items-center"
+              >
+                <Image
+                  className="hover: cursor-pointer"
+                  onClick={() => window.open(client.href, "_blank")}
+                  height={client.imgHeight}
+                  width={client.imgWidth}
+                  src={client.img}
+                  alt={`${client.name}-logo`}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
