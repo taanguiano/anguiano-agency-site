@@ -15,9 +15,11 @@ export const Projects = () => {
             Projects
           </div>
           <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold mt-5">
-            What I've Built:
+            What I&apos;ve Built:
           </h2>
-          <p className="text-pText text-3xl mt-2">{`Projects that define my experience.`}</p>
+          <p className="text-pText text-3xl mt-2">
+            Projects that define my experience.
+          </p>
         </div>
         <div className="md:gap-12 gap-6 flex-col flex items-center mt-32">
           {projects.map((project, index) => {
