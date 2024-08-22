@@ -1,8 +1,8 @@
-import { Project } from "../types/projects-types";
 import btDemo1 from "../../../public/btDemo1.png";
 import ciroDemo1 from "../../../public/ciroDemo1.png";
 import fmsDemo1 from "../../../public/fmsDemo1.jpeg";
 import csmDemo1 from "../../../public/csmDemo1.png";
+import { Project } from "../types/projects-types";
 
 export default class ProjectsApi {
   static getProjects(): Project[] {
