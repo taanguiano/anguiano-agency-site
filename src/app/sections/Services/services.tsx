@@ -18,26 +18,26 @@ export const Services = () => {
             <div className="w-fit mx-auto border border-gray-100 py-[1px] px-[12px] rounded-xl font-medium text-2xl bg-black shadow-lg">
               Services
             </div>
-            <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold mt-5">
+            <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold mt-5 px-8">
               What I Can Do For You:
             </h2>
             <p className="text-pText text-3xl mt-2">{`Skills I bring to the table.`}</p>
           </div>
-          <div className="mt-32 flex flex-col w-full gap-40 md:justify-center md:gap-80 md:flex-row px-5">
+          <div className="md:px-0 mt-32 flex flex-col w-full gap-40 md:justify-center md:gap-80 md:flex-row px-8">
             {/* 1st Column */}
             <div className="flex flex-col w-full gap-40 h-full">
               {/* 1st Section */}
               <div className="flex flex-col w-full items-center h-1/2">
-                <div className="flex items-center justify-center bg-web-design-dev-gradient w-28 h-28 rounded-3xl shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] mb-8">
+                <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-web-dev-icon">
                   <IconDeviceDesktopCode
                     size={40}
-                    className="text-shadow-[_0_1px_0_rgb(0_0_0_/_40%)] font-bold"
+                    className="text-web-dev-text"
                   />
                 </div>
-                <span className="text-[3rem] mb-3 font-normal text-gray-200 text-center">
+                <span className="text-[3rem] mb-3 font-normal text-gray-200 text-center px-8">
                   Custom Web Development
                 </span>
-                <span className="text-2xl text-center font-light text-gray-400">
+                <span className="text-2xl text-center font-light text-gray-400 px-8">
                   I build responsive, high-performance web applications using
                   NextJS, React, and Tailwind. My focus is on creating apps that
                   not only look great but also deliver a seamless user
@@ -46,8 +46,8 @@ export const Services = () => {
               </div>
               {/* 2nd Section */}
               <div className="flex flex-col w-full items-center h-1/2">
-                <div className="flex items-center justify-center bg-app-design-dev-gradient w-28 h-28 rounded-3xl shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] mb-8">
-                  <IconDatabase size={40} />
+                <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-full-stack-icon">
+                  <IconDatabase size={40} className="text-full-stack-text" />
                 </div>
                 <span className="text-[3rem] mb-3 text-gray-200 text-center">
                   Full Stack Solutions
@@ -64,8 +64,11 @@ export const Services = () => {
             <div className="flex flex-col w-full gap-40">
               {/* 3rd Section */}
               <div className="flex flex-col w-full items-center">
-                <div className="flex items-center justify-center bg-seo-gradient w-28 h-28 rounded-3xl shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] mb-8">
-                  <IconDeviceMobileCode size={40} className="" />
+                <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-mobile-dev-icon">
+                  <IconDeviceMobileCode
+                    size={40}
+                    className="text-mobile-dev-tezt"
+                  />
                 </div>
                 <span className="text-[3rem] mb-3 text-gray-200 text-center">
                   Mobile App Development
@@ -79,8 +82,8 @@ export const Services = () => {
               </div>
               {/* 4th Section */}
               <div className="flex flex-col w-full items-center">
-                <div className="flex items-center justify-center bg-ai-gradient w-28 h-28 rounded-3xl shadow-[inset_0_-2px_4px_rgba(0,0,0,0.6)] mb-8">
-                  <IconUxCircle size={40} />
+                <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-ui-ux-icon">
+                  <IconUxCircle size={40} className="text-ui-ux-text" />
                 </div>
                 <span className="text-[3rem] mb-3 text-gray-200 text-center">
                   UI/UX Design Integration

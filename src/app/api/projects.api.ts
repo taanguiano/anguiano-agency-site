@@ -2,20 +2,20 @@ import btDemo1 from "../../../public/btDemo1.png";
 import ciroDemo1 from "../../../public/ciroDemo1.png";
 import fmsDemo1 from "../../../public/fmsDemo1.jpeg";
 import csmDemo1 from "../../../public/csmDemo1.png";
-import { Project } from "../utils/types/projects-types";
+import { Project, ProjectNames } from "../utils/types/projects-types";
 
 export default class ProjectsApi {
   static getProjects(): Project[] {
     return [
       {
-        name: "BuilderTrend",
+        name: ProjectNames.Buildertrend,
         url: "https://buildertrend.net/summaryGrid.aspx",
         img: btDemo1,
         description: "A residential construction management platform.",
         skills: ["React", ".NET", "SQL", "C#", "Microsoft Webforms"],
       },
       {
-        name: "ciro by Medical Solutions",
+        name: ProjectNames.CiroMedSol,
         url: "https://ciro.co",
         img: ciroDemo1,
         description:
@@ -23,7 +23,7 @@ export default class ProjectsApi {
         skills: ["React", "Styled Components", "React Query"],
       },
       {
-        name: "Fusion Medical Staffing",
+        name: ProjectNames.FusionMedStaff,
         url: "https://www.fusionmedstaff.com/",
         img: fmsDemo1,
         description:
@@ -31,7 +31,7 @@ export default class ProjectsApi {
         skills: ["React Native", "React", "Styled Components", "React Query"],
       },
       {
-        name: "cSM by Medical Solutions",
+        name: ProjectNames.CiroShift,
         url: "https://shifts.ciro.co",
         img: csmDemo1,
         description:

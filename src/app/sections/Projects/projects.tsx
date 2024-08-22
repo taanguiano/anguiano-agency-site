@@ -10,7 +10,7 @@ export const Projects = () => {
       className="t-[var(--navigation-height)] pt-[190px] pb-[190px]"
     >
       <div className="flex flex-col">
-        <div className="w-fit mx-auto text-center">
+        <div className="md:px-0 w-fit mx-auto text-center px-8">
           <div className="w-fit mx-auto border border-gray-100 py-[1px] px-[12px] rounded-xl font-medium text-2xl bg-black shadow-lg">
             Projects
           </div>
@@ -21,7 +21,7 @@ export const Projects = () => {
             Projects that define my experience.
           </p>
         </div>
-        <div className="md:gap-12 gap-6 flex-col flex items-center mt-32">
+        <div className="gap-12 flex-col flex items-center mt-32">
           {projects.map((project, index) => {
             return (
               <ProjectCard key={project.name} {...project} index={index} />

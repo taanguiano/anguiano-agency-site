@@ -24,8 +24,8 @@ export const Footer = () => {
   return (
     <footer className="overflow-visible">
       <div className="mx-auto w-full max-w-screen-xl">
-        <div className="md:mb-64 mb-40 flex flex-col items-center">
-          <h2 className="md:text-[5rem] text-[4rem] leading-[1.2] font-semibold my-5 flex justify-center text-center">
+        <div className="md:mb-64 md:px-0 mb-40 flex flex-col items-center px-8">
+          <h2 className="md:text-[5rem] md:px-8 text-[4rem] leading-[1.2] font-semibold my-5 flex justify-center text-center">
             Have an idea? <br /> {`Let's collaborate.`}
           </h2>
           <button
@@ -35,7 +35,7 @@ export const Footer = () => {
             Download My Resume
           </button>
         </div>
-        <div className="md:flex-row md:justify-between flex flex-col w-full items-center px-5">
+        <div className="md:flex-row md:justify-between md:px-0 flex flex-col w-full items-center px-8">
           <span className="text-2xl text-center text-gray-400">
             © {new Date().getFullYear()}{" "}
             <a href="https://flowbite.com/" className="hover:underline">
