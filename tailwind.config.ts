@@ -87,8 +87,6 @@ const config: Config = {
           "linear-gradient(201deg, rgba(0,130,143,1) 0%, rgba(0,255,184,1) 69%)",
         "ai-gradient":
           "linear-gradient(201deg, rgba(255,15,205,1) 0%, rgba(250,117,117,1) 69%)",
-        // "linear-gradient(to right, #FFA84C, #FED338, #FEFD00)",
-        // "linear-gradient(to right, #90abf5, #a5d7ce)",
       },
       boxShadow: {
         glass: "0 8px 22px 0 rgba( 31, 38, 135, 0.37 )",

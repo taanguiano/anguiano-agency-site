@@ -11,7 +11,7 @@ export const Services = () => {
     <>
       <div
         id="our-services"
-        className="t-[var(--navigation-height)] pt-[190px]"
+        className="t-[var(--navigation-height)] md:pt-[190px] pt-[150px]"
       >
         <div className="flex flex-col">
           <div className="w-fit mx-auto text-center">
@@ -23,9 +23,9 @@ export const Services = () => {
             </h2>
             <p className="text-pText text-3xl mt-2">{`Skills I bring to the table.`}</p>
           </div>
-          <div className="md:px-0 mt-32 flex flex-col w-full gap-40 md:justify-center md:gap-80 md:flex-row px-8">
+          <div className="md:px-0 mt-32 flex flex-col w-full gap-20 md:justify-center md:gap-80 md:flex-row px-8">
             {/* 1st Column */}
-            <div className="flex flex-col w-full gap-40 h-full">
+            <div className="flex flex-col w-full md:gap-40 gap-20 h-full">
               {/* 1st Section */}
               <div className="flex flex-col w-full items-center h-1/2">
                 <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-web-dev-icon">
@@ -61,7 +61,7 @@ export const Services = () => {
               </div>
             </div>
             {/* 2nd Column */}
-            <div className="flex flex-col w-full gap-40">
+            <div className="flex flex-col w-full md:gap-40 gap-20">
               {/* 3rd Section */}
               <div className="flex flex-col w-full items-center">
                 <div className="flex items-center justify-center w-28 h-28 rounded-3xl mb-8 bg-mobile-dev-icon">

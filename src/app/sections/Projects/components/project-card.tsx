@@ -22,7 +22,7 @@ export const ProjectCard = ({
 }: ProjectCardProps) => {
   const isReversed = index % 2;
 
-  const projectColor = useMemo((): string => {
+  const getProjectColor = (name: string): string => {
     switch (name) {
       case ProjectNames.Buildertrend:
         return `#0276cc`;
@@ -33,7 +33,7 @@ export const ProjectCard = ({
       default:
         return `#7a5499`;
     }
-  }, [name]);
+  };
 
   return (
     <a href={url} target="_blank" className="group">
@@ -45,7 +45,9 @@ export const ProjectCard = ({
         <div
           className={`w-[350px] ${
             isReversed ? "left-0" : "right-0"
-          } bottom-1 absolute h-[20rem] w-[40rem] blur-[120px] bg-[${projectColor}] z-1`}
+          } bottom-1 absolute h-[20rem] w-[40rem] blur-[120px] bg-[${getProjectColor(
+            name
+          )}] z-1`}
         />
         <div className="md:w-1/2 md:p-20 p-5">
           <Image
@@ -75,22 +77,3 @@ export const ProjectCard = ({
     </a>
   );
 };
-
-// <div className="rounded-lg shadow bg-secondary h-fit w-1/4 max-w-1/4">
-//   <a href={url} target="_blank">
-//     <Image
-//       width={300}
-//       height={300}
-//       className="rounded-t-lg"
-//       alt=""
-//       src={img}
-//     />
-//   </a>
-//   <div className="p-5">
-//     <a href="#">
-//       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-//         {name}
-//       </h5>
-//     </a>
-//   </div>
-// </div>

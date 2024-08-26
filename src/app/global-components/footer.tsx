@@ -4,6 +4,7 @@ import React from "react";
 // import Routes from "../utils/routes";
 import { useRouter } from "next/navigation";
 import {
+  IconArrowRight,
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandX,
@@ -30,9 +31,9 @@ export const Footer = () => {
           </h2>
           <button
             onClick={() => downloadURI(resumeUri, "Resume")}
-            className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl w-fit inline-text text-3xl mt-1"
+            className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl w-fit inline-text mt-1 text-2xl flex items-center gap-2"
           >
-            Download My Resume
+            {`Contact Me`} <IconArrowRight size={20} />
           </button>
         </div>
         <div className="md:flex-row md:justify-between md:px-0 flex flex-col w-full items-center px-8">

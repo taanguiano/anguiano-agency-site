@@ -7,7 +7,7 @@ export const Projects = () => {
   return (
     <div
       id="our-projects"
-      className="t-[var(--navigation-height)] pt-[190px] pb-[190px]"
+      className="t-[var(--navigation-height)] md:pt-[190px] md:pb-[190px] pt-[150px] pb-[90px] bg-projects-background"
     >
       <div className="flex flex-col">
         <div className="md:px-0 w-fit mx-auto text-center px-8">

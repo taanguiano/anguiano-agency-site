@@ -11,18 +11,28 @@ export const Header = () => {
   const { downloadURI } = useDownloadFile();
 
   return (
-    <header className="md:px-0 z-1 h-10 border-red-100 bg-transparent py-10">
+    <header className="md:px-0 z-1 border-red-100 bg-transparent pt-6">
       <Container className="px-5">
-        <nav className="text-info w-full flex justify-between ">
+        <nav className="text-info w-full flex justify-between items-center align-center">
           <Link className="" href="/">
-            <Image src={tanguianoLogo} height={50} width={50} alt="logo" />
+            <Image src={tanguianoLogo} height={40} width={40} alt="logo" />
           </Link>
-          <button
-            onClick={() => downloadURI(resumeUri, "Resume")}
-            className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl"
-          >
-            <span className="text-3xl">Download My resume</span>
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => downloadURI(resumeUri, "Resume")}
+              className="bg-transparent text-white py-2 px-4 rounded-xl hover:decoration underline"
+            >
+              <span className="text-xl leading-5 font-semibold">
+                Download my resume
+              </span>
+            </button>
+            <button
+              onClick={() => downloadURI(resumeUri, "Resume")}
+              className="bg-hero-title-gradient text-white py-1 px-3 rounded-xl"
+            >
+              <span className="text-2xl">Contact Me</span>
+            </button>
+          </div>
         </nav>
       </Container>
     </header>

@@ -14,6 +14,12 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1"
         />
+        <link
+          rel="icon"
+          href="../../public/tanguianoLogofavIcon.svg"
+          sizes="any"
+          type="image/svg+xml"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
