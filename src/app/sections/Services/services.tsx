@@ -11,7 +11,7 @@ export const Services = () => {
     <>
       <div
         id="our-services"
-        className="t-[var(--navigation-height)] md:pt-[190px] pt-[150px]"
+        className="t-[var(--navigation-height)] md:pt-[90px] md:pb-[120px] pt-[80px] pb-[90px] bg-secondary max-w-[120rem] mx-auto"
       >
         <div className="flex flex-col">
           <div className="w-fit mx-auto text-center">

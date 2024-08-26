@@ -14,8 +14,10 @@ export default function Home() {
         <Header />
         <Hero />
         <ClientLogos />
-        <Container>
+        <Container className="bg-secondary max-w-none">
           <Services />
+        </Container>
+        <Container>
           <Projects />
         </Container>
       </main>

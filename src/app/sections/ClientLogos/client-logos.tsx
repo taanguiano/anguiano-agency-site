@@ -47,7 +47,7 @@ export const clients = [
 
 export const ClientLogos = () => {
   return (
-    <div className="mt-[75px]">
+    <div className="mt-[75px] mb-[90px]">
       <div className="flex flex-col items-center">
         <p className="pb-10 text-3xl text-white text-opacity-40">Trusted by</p>
         <div className="flex flex-row">
