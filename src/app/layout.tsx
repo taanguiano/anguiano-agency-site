@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Container } from "./global-components/container";
 import { Footer } from "./global-components/footer";
+import { Header } from "./global-components/header";
 
 export default function RootLayout({
   children,
@@ -33,6 +34,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-x-hidden font-kanit">
         <div>
+          <Header />
           <div className="">{children}</div>
           <Container>
             <Footer />

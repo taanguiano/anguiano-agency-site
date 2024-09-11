@@ -26,12 +26,11 @@ export const Header = () => {
                 Download my resume
               </span>
             </button>
-            <button
-              onClick={() => downloadURI(resumeUri, "Resume")}
-              className="bg-hero-title-gradient text-white py-1 px-3 rounded-xl"
-            >
-              <span className="text-2xl">Contact Me</span>
-            </button>
+            <Link href="/contact-me" className="text-2xl">
+              <button className="bg-hero-title-gradient text-white py-1 px-3 rounded-xl">
+                Contact Me
+              </button>
+            </Link>
           </div>
         </nav>
       </Container>
