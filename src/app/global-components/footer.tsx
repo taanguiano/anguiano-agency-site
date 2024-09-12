@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { useDownloadFile } from "../hooks/useDownloadFile";
 import { resumeUri } from "../utils/constants";
+import Link from "next/link";
 
 const SocialLinks = {
   GitHub: "https://github.com/taanguiano",
@@ -29,12 +30,11 @@ export const Footer = () => {
           <h2 className="md:text-[5rem] md:px-8 text-[4rem] leading-[1.2] font-semibold my-5 flex justify-center text-center">
             Have an idea? <br /> {`Let's collaborate.`}
           </h2>
-          <button
-            onClick={() => downloadURI(resumeUri, "Resume")}
-            className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl w-fit inline-text mt-1 text-2xl flex items-center gap-2"
-          >
-            {`Contact Me`} <IconArrowRight size={20} />
-          </button>
+          <Link href="/contact-me">
+            <button className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl w-fit inline-text mt-1 text-2xl flex items-center gap-2">
+              {`Contact Me`} <IconArrowRight size={20} />
+            </button>
+          </Link>
         </div>
         <div className="md:flex-row md:justify-between md:px-0 flex flex-col w-full items-center px-8">
           <span className="text-2xl text-center text-gray-400">
