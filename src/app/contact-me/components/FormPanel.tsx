@@ -1,4 +1,6 @@
+// MUI Components
 import {
+  Alert,
   Button,
   Dialog,
   DialogActions,
@@ -6,8 +8,15 @@ import {
   DialogTitle,
   Typography,
 } from "@mui/material";
+
+// React and Hooks
 import React, { useState } from "react";
+
+// Custom Components
 import { ErrorMessage } from "../page";
+
+// Icons
+import { Error, Warning } from "@mui/icons-material";
 
 type FormPanelProps = {
   formIsSubmitting: boolean;
@@ -41,19 +50,31 @@ export const FormPanel = ({
   return (
     <div className="mt-4">
       {numberOfDirtyFieldErrors > 0 ? (
-        <Typography className="text-red-400 text-2xl font-semibold">
-          <span
-            className="underline cursor-pointer"
-            onClick={() => setShowPreSubErrorsModal(!showPreSubErrorsModal)}
-          >
-            {numberOfDirtyFieldErrors}
-          </span>
-          &nbsp;errors.
-        </Typography>
+        <Alert
+          variant="outlined"
+          severity="error"
+          icon={<Error fontSize="large" />}
+        >
+          <Typography color="error" className=" text-2xl font-semibold">
+            <span
+              className="underline cursor-pointer"
+              onClick={() => setShowPreSubErrorsModal(!showPreSubErrorsModal)}
+            >
+              {numberOfDirtyFieldErrors}
+            </span>
+            &nbsp;errors.
+          </Typography>
+        </Alert>
       ) : numberOfDirtyFields > 0 ? (
-        <Typography className="text-yellow-400 text-2xl font-semibold">
-          {numberOfDirtyFields} changes
-        </Typography>
+        <Alert
+          variant="outlined"
+          severity="warning"
+          icon={<Warning fontSize="large" />}
+        >
+          <Typography className=" text-2xl font-semibold">
+            {numberOfDirtyFields} change(s)
+          </Typography>
+        </Alert>
       ) : (
         <Typography className="text-2xl font-semibold">No changes.</Typography>
       )}

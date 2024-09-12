@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import { Container } from "../global-components/container";
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import ContactMeSchema, { ContactMeType } from "./utils/contact-me.schema";
+// Zod Resolver for React Hook Form validation
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormPanel } from "./components/FormPanel";
-import { mockSubmit } from "./utils/contact-me.mock.api";
+
+// Icons
 import {
   CheckCircle as CheckCircleIcon,
   Error as ErrorIcon,
 } from "@mui/icons-material";
+
+// MUI Components
 import {
   Button,
   CircularProgress,
@@ -19,6 +18,18 @@ import {
   DialogTitle,
   Typography,
 } from "@mui/material";
+
+// React and Hooks
+import React, { useState } from "react";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+
+// Custom Components
+import { Container } from "../global-components/container";
+import { FormPanel } from "./components/FormPanel";
+
+// Utilities and Schemas
+import { mockSubmit } from "./utils/contact-me.mock.api";
+import ContactMeSchema, { ContactMeType } from "./utils/contact-me.schema";
 
 export type ErrorMessage = {
   field: string;
