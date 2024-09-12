@@ -131,9 +131,9 @@ const ContactMePage = () => {
 
   return (
     <>
-      <Container className="my-80">
+      <Container className="my-40">
         <h1 className="text-6xl w-full text-center pb-6">Contact Me</h1>
-        <div className="w-1/2 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 bg-secondary">
+        <div className="w-full md:w-1/2 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 bg-secondary">
           <FormProvider {...methods}>
             <form
               className="my-8"
