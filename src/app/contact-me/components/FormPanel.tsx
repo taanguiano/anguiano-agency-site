@@ -61,7 +61,13 @@ export const FormPanel = ({
         {statusIcon()} {statusMessage()}
       </div>
       <div className="w-full flex justify-center gap-10 mt-4">
-        <Button disabled={formIsSubmitting} onClick={onReset}>
+        <Button
+          variant="contained"
+          color="secondary"
+          disabled={formIsSubmitting}
+          onClick={onReset}
+          className="text-2xl"
+        >
           Refresh
         </Button>
         <Button
@@ -85,7 +91,7 @@ export const FormPanel = ({
         onClose={() => setShowPreSubErrorsModal(false)}
       >
         <DialogTitle className="text-5xl font-semibold">
-          Your form has errors!
+          Your changes have errors!
         </DialogTitle>
         <DialogContent>
           {errorMessages.map((errorMessage, index) => {
