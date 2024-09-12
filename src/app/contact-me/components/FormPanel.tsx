@@ -14,10 +14,12 @@ type FormPanelProps = {
   formIsDirty: boolean;
   numberOfDirtyFields: number;
   numberOfDirtyFieldErrors: number;
+  numberOfSubmissionErrors: number;
   errorMessages: ErrorMessage[];
   statusMessage: () => React.ReactNode;
   statusIcon: () => React.ReactNode;
   onSubmit: () => Promise<void>;
+  onReset: () => void;
 };
 
 export const FormPanel = ({
@@ -25,17 +27,19 @@ export const FormPanel = ({
   formIsSubmitting,
   numberOfDirtyFields,
   numberOfDirtyFieldErrors,
+  numberOfSubmissionErrors,
   errorMessages,
   onSubmit,
   statusIcon,
   statusMessage,
+  onReset,
 }: FormPanelProps) => {
   // State
   // Pre submission errors modal
   const [showPreSubErrorsModal, setShowPreSubErrorsModal] = useState(false);
 
   return (
-    <>
+    <div className="mt-4">
       {numberOfDirtyFieldErrors > 0 ? (
         <Typography className="text-red-400 text-2xl font-semibold">
           <span
@@ -53,13 +57,19 @@ export const FormPanel = ({
       ) : (
         <Typography className="text-2xl font-semibold">No changes.</Typography>
       )}
-      <div className="flex gap-4">
+      <div className="flex gap-4 mt-4">
         {statusIcon()} {statusMessage()}
       </div>
-      <div className="w-full flex justify-center gap-10">
+      <div className="w-full flex justify-center gap-10 mt-4">
+        <Button disabled={formIsSubmitting} onClick={onReset}>
+          Refresh
+        </Button>
         <Button
           disabled={
-            !formIsDirty || numberOfDirtyFieldErrors > 0 || formIsSubmitting
+            !formIsDirty ||
+            numberOfDirtyFieldErrors > 0 ||
+            formIsSubmitting ||
+            numberOfSubmissionErrors > 0
           }
           color="info"
           variant="contained"
@@ -101,6 +111,6 @@ export const FormPanel = ({
           </Button>
         </DialogActions>
       </Dialog>
-    </>
+    </div>
   );
 };

@@ -64,13 +64,15 @@ const ContactMePage = () => {
     setSubmitting(true);
     try {
       await mockSubmit();
+      reset();
     } catch (e) {
       console.error(e);
-      // Throwing runtime error here to negate isSubmitSuccessful
-      throw Error("Failed to save.");
+      setError("root.serverError", {
+        type: "manual",
+        message: (e as Error).message as string,
+      });
     } finally {
       setSubmitting(false);
-      reset();
     }
   };
 
@@ -120,15 +122,15 @@ const ContactMePage = () => {
     <>
       <Container className="my-80">
         <h1 className="text-6xl w-full text-center pb-6">Contact Me</h1>
-        <div className="w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 bg-secondary">
+        <div className="w-1/2 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 bg-secondary">
           <FormProvider {...methods}>
             <form
               className="my-8"
               onSubmit={handleSubmit(onSubmit)}
               autoComplete="off"
             >
-              <div className="flex flex-col md:flex-row gap-8 mb-4">
-                <div className="flex flex-col w-full">
+              <div className="flex flex-col">
+                <div className="flex flex-col mb-4 w-full">
                   <label htmlFor="firstName">First name</label>
                   <input
                     id="firstName"
@@ -138,7 +140,7 @@ const ContactMePage = () => {
                     {...register("firstName")}
                   />
                 </div>
-                <div className="flex flex-col w-full">
+                <div className="flex flex-col mb-4 w-full">
                   <label htmlFor="lastName">Last name</label>
                   <input
                     id="lastName"
@@ -149,7 +151,7 @@ const ContactMePage = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex flex-col">
                 <div className="flex flex-col w-full mb-4">
                   <label htmlFor="email">Email Address</label>
                   <input
@@ -177,9 +179,11 @@ const ContactMePage = () => {
                 numberOfDirtyFields={Object.keys(dirtyFields).length}
                 numberOfDirtyFieldErrors={dirtyFieldErrors.length}
                 errorMessages={dirtyFieldErrorMessages}
+                numberOfSubmissionErrors={Object.keys(errors).length}
                 onSubmit={handleSubmit(onSubmit)}
                 statusIcon={getStatusIcon}
                 statusMessage={getStatusMessage}
+                onReset={() => reset()}
               />
             </form>
           </FormProvider>
@@ -190,7 +194,7 @@ const ContactMePage = () => {
         onClose={() => setShowPostSubErrorsModal(false)}
       >
         <DialogTitle>Your submission failed!</DialogTitle>
-        <DialogContent></DialogContent>
+        <DialogContent>{errors.root?.serverError.message}</DialogContent>
       </Dialog>
     </>
   );

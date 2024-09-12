@@ -4,7 +4,7 @@ export const mockSubmit = async () => {
       const isSuccess = Math.random() > 0.5; // Simulate random success/failure
       isSuccess
         ? resolve()
-        : reject(new Error("Your last name is just not the right one!"));
+        : reject(new Error("Here is a huge huge huge big ol' server error!"));
     }, 1500);
   });
 };
