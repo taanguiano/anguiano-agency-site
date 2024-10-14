@@ -20,17 +20,10 @@ export const Header = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => downloadURI(resumeUri, "Resume")}
-              className="bg-transparent text-white py-2 px-4 rounded-xl hover:decoration underline"
+              className="bg-hero-title-gradient text-white py-1 px-3 rounded-xl text-2xl"
             >
-              <span className="text-xl leading-5 font-semibold">
-                Download my resume
-              </span>
+              Download My Resume
             </button>
-            <Link href="/contact-me" className="text-2xl">
-              <button className="bg-hero-title-gradient text-white py-1 px-3 rounded-xl">
-                Contact Me
-              </button>
-            </Link>
           </div>
         </nav>
       </Container>

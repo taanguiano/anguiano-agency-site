@@ -18,7 +18,7 @@ export const Hero = () => {
           Design. Develop. Deliver.
         </h1>
         <p className="md:px-0 text-pText text-3xl mt-0 px-8">{`I am a front-end focused Full Stack Software Engineer w/ 5+ years of experience, and I will provide results for your team.`}</p>
-        <Link href="/contact-me">
+        <Link href="mailto:anguiano.dev@gmail.com">
           <button className="bg-hero-title-gradient text-white py-2 px-4 rounded-xl mt-8">
             <span className="text-2xl flex items-center gap-2">
               {`Let's Talk`} <IconArrowRight size={20} />
